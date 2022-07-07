@@ -1,0 +1,559 @@
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  height: 100vh;
+}
+#root{
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  background-image: url(./imgs/wallpapersden.com_macos-12-monterey-stock-dark_2560x1600.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+:root{
+  --color_bg: #020508;
+  --color_blue: #243B67;
+  --color_purple: #C27DFC;
+  --color_mid: #6E5DCF;
+  --color_white: #EAEBED;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* lb */
+.app{
+  height: 100vh;
+}
+.App{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.App .l-page{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  backdrop-filter: blur(25px);
+  background-color: rgba(255, 255, 255, 0.185);
+  width: 85%;
+  margin:  0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.253);
+  text-align: center;
+}
+.App .l-page .l-page_content{
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.App .l-page .l-page_content p{
+  margin-bottom: 10px;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.404);
+  font-weight: 700;
+
+}
+
+.App .l-page .l-page_content a{
+  width: 130px;
+  margin: 10px auto;
+  padding: 13px;
+  font-size: 20px;
+  border: none; 
+  background-color:#007aff;
+  color: white;
+  border-radius: 5px;
+  transition: .3s;
+  text-decoration: none;
+}
+.App .l-page .l-page_content a:hover{
+  cursor: pointer;
+  background-color: white;
+  color: #007aff;
+}
+.ilustrate{
+  height: 350px;
+  filter:drop-shadow(10px 10px 13px #0000009c); 
+}
+
+
+/* Home styles */
+.Home{
+  display: flex;
+  width: 100%;
+  align-self: flex-start;
+  flex-direction: column;
+
+}
+.Home .buttons-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Home .button, .boton,
+.select-breed button{
+  display: block;
+  background-color:#007aff;
+  color: var(--color_white);
+  padding: 8px 10px;
+  font-size: 20px;
+  border: none;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: all .3s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.Home .button:nth-child(3){
+  margin-right: 20px;
+  font-weight: 600;
+}
+.Home .button:hover, .boton:hover,
+.select-breed button:hover{
+  background-color: #ffffff;
+  color: #007aff;
+  cursor: pointer;
+}
+.Home .form_home{
+  height: auto;
+  padding: 20px;
+  max-height: 400px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  background-color: rgba(102, 102, 102, 0.404);
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.Home .form_home input{
+  width: auto;
+  border: none;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.301);
+  border-radius: 5px 0 0 5px;
+  color: rgb(0, 0, 0);
+  outline: none;
+  font-size: 20px ;
+}
+.Home .input-content input::placeholder{
+  color:#00000031;
+  font-size: 20px;
+}
+.Home .input-content button{
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 0 5px 5px 0;
+  background-color:#007aff;
+  color: var(--color_white);
+  transition: all .3s;
+}
+.Home .input-content button:hover,
+.Form-container input[type='submit']:hover,
+.Form-container a:hover{
+  cursor:pointer;
+  background-color:white;
+  color:#007aff;
+}
+
+
+/* Cards */
+
+.Home .home-content{
+  display: flex;
+  height: 100%;
+
+}
+
+.home-content .cards-container{
+  width: 100%;
+  height: 100%;
+}
+select {
+
+  min-width: 150px;
+  box-shadow: 1px 2px 10px rgba(7,7,7, .2);
+  text-align: center;
+  outline-color: gray;
+  text-transform: capitalize;
+  appearance: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  color: white;
+}
+
+select {
+  height: 50px;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.274);
+
+}
+
+select option {
+  background-color: rgb(223, 223, 223);
+  color:#007aff;
+}
+/* CARDS */
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.123);
+  backdrop-filter: blur(10px);
+}
+
+.cards-container .boton{
+  position:absolute ;
+  
+  background-color: #007aff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.cards-container .boton:hover{
+  cursor: pointer;
+}
+
+.cards-container .main-cards{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+
+.card {
+  margin: 10px;
+  width: 300px;
+  height: auto;
+  cursor: pointer;
+  max-width: 320px;
+  transition: all .3s;
+  margin-bottom: 40px;
+}
+
+.card:hover{
+  transform: scale(1.015);
+}
+
+.card img{
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.card .character{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.336);
+  background-color: rgba(255, 255, 255, 0.068);
+  backdrop-filter: blur(25px);
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
+.card h3{
+  margin-bottom: 10px;
+  background-color: #00000031;
+}
+.card p {
+  font-size: 15px;
+  /* text-transform: uppercase; */
+  color: rgb(255, 255, 255);
+}
+
+.card .weight{
+  color: black;
+  background-color: #00000031;
+  width: 100%;
+  height: 20%;
+}
+
+.card .temperament{
+  height: 80px;
+}
+
+.link-dog{
+  text-decoration: none;
+}
+
+/* Dogs-creator */
+
+
+.Home .Tempfilter p ,
+.select-breed p{
+  color: white;
+}
+
+
+/* Styles form */
+
+.Form-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  justify-content: flex-start;
+}
+.Form-container form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.274);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.267);
+}
+
+.Form-container form select{
+  height: 35px;
+}
+.Form-container .input-container{
+  text-align: center;
+  padding: 10px;
+}
+.Form-container input{
+  color: white;
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: rgba(168, 168, 168, 0.616);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.137);
+  outline: none;
+}
+.Form-container input::placeholder{
+  color: rgb(255, 255, 255);
+}
+.Form-container label{
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.63);
+  margin-right: 10px;
+
+}
+
+.Form-container input[type='submit']{
+  box-shadow: none;
+  font-size: 20px;
+  background-color: #007aff;
+  color: white;
+  transition: all .3s;
+  margin-top: 5px;
+}
+.Form-container input[type='submit']:disabled{
+  background-color: #ce4141;
+  cursor:default;
+  color: rgb(105, 1, 1);
+}
+
+.Form-container a, 
+.card-detail-container a{
+  border: none;
+  height: 40px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color:#007aff;
+  color: var(--color_white);
+  transition: all .3s;
+  margin-left: 10px;
+}
+
+.Form-container .button-container{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.Form-container p{
+  margin: 5px;
+  outline: 1px solid rgb(170, 170, 170);
+  height: 60px;
+  width: 200px;
+  overflow-y: scroll;
+}
+
+.Form-container .temperaments-span {
+  text-align: center;
+  border: 1px solid white;
+  color: white;
+  margin: 2px 2px;
+  padding: 5px;
+  display: block;
+  background-color: #00000067;
+}
+
+.Form-container .error , 
+.Form-container .error-ob {
+  border: none;
+  color: rgb(112, 6, 6);
+  padding: 0px;
+  width: 100%;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.Form-container .error-ob{
+  color:#000000;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Paginacion */
+
+.cards-container .paginacion{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 20px;
+}
+.cards-container .paginacion button{
+  text-align: center;
+  background-color: #63636352;
+  padding: 10px;
+  height: 30px;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  transition: all .2s;
+}
+.cards-container .paginacion button:active{
+  color: black;
+}
+.cards-container .paginacion button:hover{
+  color: black;
+  transform: scale(.9);
+  cursor: pointer;
+}
+.cards-container .paginacion input{
+  background-color: #63636369;
+  width: 30px;
+  outline: 1px solid gray;
+  height: 30px;
+  margin: 0px 5px ;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  color: rgb(146, 146, 146);
+  font-weight: 700;
+}
+.cards-container .paginacion p{
+  line-height: 1.8;
+  font-weight: 700;
+  color: rgb(146, 146, 146);
+  margin-right: 5px;
+}
+
+/* styles card detail  */
+.card-detail-container{
+  padding-bottom: 5px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cardDetail{
+  display: flex;
+  flex-direction: column;
+  background-color: #5c5c5c6e;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.397);
+  border-radius: 10px;
+  color: white;
+  flex-wrap: wrap;
+  backdrop-filter: blur(25px);
+
+
+}
+
+.cardDetail img{
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+.cardDetail .character{
+  text-align: center;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.cardDetail .character p, h2{
+  padding: 5px;
+  border-bottom: 1px solid rgba(253, 253, 253, 0.596);
+  margin: 5px 0px;
+}
+
+.card-detail-container .button-container{
+  width: 100%;
+  height: 100px;
+  padding: 10px 0px ;
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+}
+.card-detail-container .button-container a:hover{
+  background-color: white;
+  color: #007aff;
+}
+
+
+/* scroll personalizado */
+body::-webkit-scrollbar{
+  width: 10px;
+  background-color: #412888;
+
+}
+
+body::-webkit-scrollbar-thumb{
+  background:#C27DFC;
+  border-radius: 10px;
+
+}
+
+
